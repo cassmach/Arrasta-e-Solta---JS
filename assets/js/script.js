@@ -45,5 +45,10 @@ function drop (e) {
     e.currentTarget.classList.remove('hover');
 
     let dragItem = document.querySelector('.item.dragging');
-    console.log(dragItem)
+
+
+    if (e.currentTarget.querySelector('.item') === null){
+            // appendChild para adicionar um elemento dentro do item
+        e.currentTarget.appendChild(dragItem);
+    }
 }
